@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HLS Player</title>
+    <link href="https://vjs.zencdn.net/7.18.1/video-js.css" rel="stylesheet" />
+    <script src="https://vjs.zencdn.net/7.18.1/video.min.js"></script>
+
+    <style>
+      #videoPlayer {
+        max-width: 100%;
+        aspect-ratio: 16/9;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>HLS Video Player</h1>
+    <video
+      id="videoPlayer"
+      class="video-js"
+      controls
+      preload="auto"
+      data-setup="{}"
+    >
+      <source src="<%=url%>" type="application/x-mpegURL" />
+      Your browser does not support the video tag.
+    </video>
+
+    <script>
+      var player = videojs("videoPlayer");
+    </script>
+  </body>
+</html>
